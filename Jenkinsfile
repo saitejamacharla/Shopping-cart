@@ -46,7 +46,7 @@ pipeline {
                 milestone(1)
                 kubernetesDeploy(
                     kubeconfigId: 'kubeconfig',
-                    configs: adservice-kube.yml',
+                    configs: 'adservice-kube.yml',
                     enableConfigSubstitution: true
                     )
             }
