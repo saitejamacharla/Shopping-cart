@@ -61,7 +61,7 @@ Step5: Now we need to build docker images for the microservices.
 Step6: Before building the docker images, we need a registry to store our images( So we are going to utilize amazon ECR for this).
 
 Step 7: Create a repository for each microservice(ex: adservice, emailservice, ............).
-Screen Shot 2019-09-22 at 12.34.45 PM
+
 
 Step8: Here are some of the commands:
 - $(aws ecr get-login --no-include-email --region us-east-1)
