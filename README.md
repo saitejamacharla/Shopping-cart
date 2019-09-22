@@ -61,8 +61,6 @@ Step5: Now we need to build docker images for the microservices.
 Step6: Before building the docker images, we need a registry to store our images( So we are going to utilize amazon ECR for this).
 
 Step 7: Create a repository for each microservice(ex: adservice, emailservice, ............).
-(Shopping-cart/docs/img/Create ECR repository.png)
-
 
 
 Step8: Here are some of the commands:
@@ -74,25 +72,27 @@ Step8: Here are some of the commands:
 
 Step9: After pushing the images, its to deploy them as kubernetes pods.
 
+
 Step10: Now, we need to create kubernetes secret for the docker to pull image from ECR.
+Note: https://dab.io/getting-started-with-kubernetes.html for more details on creating secrets
 
 
 
-Step10. change your directory to cd/Shopping-cart/kubernetes-manifests/ 
+Step11. change your directory to cd/Shopping-cart/kubernetes-manifests/ 
 
-Step11: Now make sure you change the image in the manifest file to your ecr repository name like this 153439452303.dkr.ecr.us-east-1.amazonaws.com/adservice:latest and also insert kubernetes secrets
+Step12: Now make sure you change the image in the manifest file to your ecr repository name like this 153439452303.dkr.ecr.us-east-1.amazonaws.com/adservice:latest and also insert kubernetes secrets
 
 
 
-Step12: Now create the deployment by - kubectl create -f adservice.yaml
+Step13: Now create the deployment by - kubectl create -f adservice.yaml
 
-Step13: create the deployments for all the microservices in the same way.
+Step14: create the deployments for all the microservices in the same way.
 
-Step14: Kubectl get deployments (make sure all the deployments running)
+Step15: Kubectl get deployments (make sure all the deployments running)
 
-Step15: kubectl get svc (copy the entrypoint for the frontend service)
+Step16: kubectl get svc (copy the entrypoint for the frontend service)
 
-Step16: got to web browser http://www.[your-ip]:[entrypoint]
+Step17: got to web browser http://www.[your-ip]:[entrypoint]
 
 
 
