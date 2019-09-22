@@ -53,22 +53,37 @@ Step1: Create a VPC for your Cluster.
 Step2: Create an EKS cluster.
 
 Step3: Join 3 Worker nodes to the Cluster ( A 3 node Cluster is enough to run our application).
+
 Step4: Clone the repo https://github.com/saitejamacharla/Shopping-cart.
+
 Step5: Now we need to build docker images for the microservices.
+
 Step6: Before building the docker images, we need a registry to store our images( So we are going to utilize amazon ECR for this).
+
 Step 7: Create a repository for each microservice(ex: adservice, emailservice, ............).
+Screen Shot 2019-09-22 at 12.34.45 PM
+
 Step8: Here are some of the commands:
 - $(aws ecr get-login --no-include-email --region us-east-1)
 - docker build -t adservice .
 - docker tag adservice:latest 153439452303.dkr.ecr.us-east-1.amazonaws.com/adservice:latest
 - docker push 153439452303.dkr.ecr.us-east-1.amazonaws.com/adservice:latest
+
+
 Step9: After pushing the images, its to deploy them as kubernetes pods.
+
 Step10. change your directory to cd/Shopping-cart/kubernetes-manifests/ 
+
 Step11: Now make sure you change the image in the manifest file to your ecr repository name like this 153439452303.dkr.ecr.us-east-1.amazonaws.com/adservice:latest
+
 Step12: Now create the deployment by - kubectl create -f adservice.yaml
+
 Step13: create the deployments for all the microservices in the same way.
+
 Step14: Kubectl get deployments (make sure all the deployments running)
+
 Step15: kubectl get svc (copy the entrypoint for the frontend service)
+
 Step16: got to web browser http://www.[your-ip]:[entrypoint]
 
 
