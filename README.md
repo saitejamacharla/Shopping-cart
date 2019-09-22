@@ -49,7 +49,9 @@ Find **Protocol Buffers Descriptions** at the [`./pb` directory](./pb).
 Amazon EKS is a managed service that makes it easy for you to use Kubernetes on AWS without needing to install and operate your own Kubernetes control plane.
 
 Step1: Create a VPC for your Cluster.
+
 Step2: Create an EKS cluster.
+
 Step3: Join 3 Worker nodes to the Cluster ( A 3 node Cluster is enough to run our application).
 Step4: Clone the repo https://github.com/saitejamacharla/Shopping-cart.
 Step5: Now we need to build docker images for the microservices.
