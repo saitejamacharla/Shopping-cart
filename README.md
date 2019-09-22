@@ -72,9 +72,15 @@ Step8: Here are some of the commands:
 
 Step9: After pushing the images, its to deploy them as kubernetes pods.
 
+Step10: Now, we need to create kubernetes secret for the docker to pull image from ECR.
+
+
+
 Step10. change your directory to cd/Shopping-cart/kubernetes-manifests/ 
 
-Step11: Now make sure you change the image in the manifest file to your ecr repository name like this 153439452303.dkr.ecr.us-east-1.amazonaws.com/adservice:latest
+Step11: Now make sure you change the image in the manifest file to your ecr repository name like this 153439452303.dkr.ecr.us-east-1.amazonaws.com/adservice:latest and also insert kubernetes secrets
+
+
 
 Step12: Now create the deployment by - kubectl create -f adservice.yaml
 
