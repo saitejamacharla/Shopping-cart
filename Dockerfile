@@ -5,6 +5,7 @@ RUN dotnet restore && \
     dotnet build && \
     dotnet publish -c release -r linux-musl-x64 -o /cartservice
 
+#testing
 # cartservice
 FROM alpine:3.8
 
